@@ -1,0 +1,2 @@
+class ConstultantsController < ApplicationController
+end
