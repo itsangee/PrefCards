@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get 'doctors/:id', to: 'doctors#show', as: :doctor
   post 'doctors', to: 'doctors#create'
   get  'doctors/:id/edit', to: 'doctors#edit'
-
+  patch 'doctors/:id', to: 'doctors#update'
 end
