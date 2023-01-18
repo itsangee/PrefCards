@@ -6,4 +6,24 @@ class DoctorsController < ApplicationController
   def show
     @doctor = Doctor.find(params[:id])
   end
+
+  def new
+    @doctor = Doctor.new
+  end
+
+  def create
+    @doctor = Doctor.new(doctor_params)
+    @doctor.save
+    redirect_to doctor_path(@doctor)
+  end
+
+  def edit
+    @doctor = Doctor.find(params[:id])
+  end
+
+  private
+
+  def doctor_params
+    params.require(:doctor).permit(:first_name, :last_name, :speciality)
+  end
 end
