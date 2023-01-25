@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Doctor.destroy_all
+Procedure.destroy_all
 puts 'creating doctors!'
 
 doctor1 = Doctor.new(
@@ -56,5 +57,18 @@ doctor7 = Doctor.new(
   speciality: 'Orthopaedic'
 )
 doctor7.save
+
+puts 'creating procedures...'
+
+pro1 = Procedure.new(
+  code: 'W3712',
+  items: 'small swab',
+  instruments: 'major orthopaedic tray',
+  description: 'Primary total hip replacement',
+  doctor: doctor7
+)
+pro1.save
+
+
 
 puts 'success!'

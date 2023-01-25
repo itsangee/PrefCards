@@ -1,10 +1,12 @@
-<h1>DOCTORS</h1>
-<%= link_to " All Doctors", doctors_path %>
+<div style="text-align:center">
+  <h1>Consultants</h1>
+  <%= link_to " All Doctors", doctors_path %>
 
-<ul>
-  <% @doctors.each do |doctor| %>
-    <li> <%= link_to doctor.first_name, doctor_path(doctor) %> <%= doctor.last_name %>, <%= doctor.speciality %>  </li>
-  <% end %>
-</ul>
+  <ul>
+    <% @doctors.each do |doctor| %>
+      <li> <%= link_to doctor.first_name, doctor_path(doctor) %> <%= doctor.last_name %>, <%= doctor.speciality %>  </li>
+    <% end %>
+  </ul>
 
-<button><p><%= link_to 'Add new Doctor', doctors_new_path %></p></button>
+  <button><p><%= link_to 'Add new Doctor', new_doctor_path %></p></button>
+</div>
