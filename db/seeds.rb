@@ -63,12 +63,55 @@ puts 'creating procedures...'
 pro1 = Procedure.new(
   code: 'W3712',
   items: 'small swab',
-  instruments: 'major orthopaedic tray',
-  description: 'Primary total hip replacement',
-  doctor: doctor7
+  instruments: 'Major Orthopaedic Tray',
+  description: 'Primary Total Hip replacement',
+  doctor: doctor1
 )
 pro1.save
 
+pro2 = Procedure.new(
+  code: 'W4212',
+  items: 'small swab',
+  instruments: 'UKA tray',
+  description: 'Minamally Invasive Knee Replacement',
+  doctor: doctor2
+)
+pro2.save
 
+pro3 = Procedure.new(
+  code: 'W8603',
+  items: 'small swab',
+  instruments: 'Arthroscopy Tray',
+  description: 'Minamally invasive knee replacement',
+  doctor: doctor3
+)
+pro3.save
+
+pro4 = Procedure.new(
+  code: 'W0323',
+  items: 'small swab',
+  instruments: 'Minor Tray',
+  description: 'Revision of Osteotomy',
+  doctor: doctor4
+)
+pro4.save
+
+pro5 = Procedure.new(
+  code: 'W5200',
+  items: 'small swab',
+  instruments: 'UKA Tray',
+  description: 'Unicompartmental knee replacement',
+  doctor: doctor3
+)
+pro5.save
+
+pro6 = Procedure.new(
+  code: 'W8603',
+  items: 'small swab',
+  instruments: 'Arthroscopy Tray',
+  description: 'Minamally invasive knee replacement',
+  doctor: doctor5
+)
+pro6.save
 
 puts 'success!'
