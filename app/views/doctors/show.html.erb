@@ -2,4 +2,13 @@
   <p> <%= @doctor.first_name %> </p>
   <p> <%= @doctor.last_name %> </p>
   <p> <%= @doctor.speciality %> </p>
+
+<% @doctor.procedures.each do |procedure| %>
+  <p><%= procedure.description %></p>
+  <p><%= procedure.code %></p>
+  <p><%= procedure.items %></p>
+  <p><%= procedure.instruments %></p>
+<% end %>
+
+
 <%= link_to 'back', doctors_path  %>
