@@ -1,0 +1,9 @@
+<div>
+  <%= simple_form_for [@doctor, @procedure] do |f| %>
+    <%= f.input :code %>
+    <%= f.input :items %>
+    <%= f.input :instruments %>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end %>
+</div>

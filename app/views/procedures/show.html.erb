@@ -1,1 +1,7 @@
-<h1>procedure</h1>
+<h1>procedures</h1>
+<% @doctor.procedures.each do |procedure|%>
+  <%= procedure.code%>
+  <%= procedure.items %>
+  <%= procedure.instruments %>
+  <%= procedure.description%>
+<%end%>
